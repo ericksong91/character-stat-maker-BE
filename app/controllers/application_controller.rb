@@ -52,7 +52,7 @@ class ApplicationController < Sinatra::Base
       name: Faker::Name.first_name,
       job: jobs[rand(0...26)],
       char_sprite: "TBD",
-      user_id: params[:id],
+      user_id: params[:user_id],
       level: rand(1...20),
       hp: rand(20...60),
       str: rand(10...35),
@@ -63,6 +63,9 @@ class ApplicationController < Sinatra::Base
       res: rand(5...35),
       luk: rand(0...30)
     )
+
+    character.save
+    character.to_json
   end
 
 end
