@@ -68,6 +68,13 @@ class ApplicationController < Sinatra::Base
     character.to_json
   end
 
+  patch '/users/characters/:id' do
+    character = Character.find(params[:id])
+
+    character.update(name: params[:name], job: params[:job])
+    character.to_json
+  end
+
   delete '/users/characters/:id' do
     character = Character.find(params[:id])
 
