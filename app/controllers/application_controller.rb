@@ -68,6 +68,14 @@ class ApplicationController < Sinatra::Base
     character.to_json
   end
 
+  post '/users/new' do
+
+    user = User.create(username: params[:name])
+    user.save
+    user.to_json
+
+  end
+
   patch '/users/characters/:id' do
     character = Character.find(params[:id])
 
