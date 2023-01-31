@@ -1,3 +1,5 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
@@ -83,9 +85,9 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/users/:id' do
-    user = user.find(params[:id])
+    user = User.find(params[:id])
 
-    user.update(username: params:name)
+    user.update(username: params[:username])
     user.to_json
   end
 
@@ -94,6 +96,13 @@ class ApplicationController < Sinatra::Base
 
     character.destroy
     character.to_json
+  end
+
+  delete 'users/:id' do
+    user = User.find(params[:id]).characters
+
+    user.destroy_all
+    user.to_json
   end
   
 
