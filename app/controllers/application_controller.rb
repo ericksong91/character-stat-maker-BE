@@ -69,7 +69,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/users/new' do
-    user = User.create(username: params[:name])
+    user = User.create(username: params[:username])
     user.save
     user.to_json
 
@@ -80,6 +80,13 @@ class ApplicationController < Sinatra::Base
 
     character.update(name: params[:name], job: params[:job])
     character.to_json
+  end
+
+  patch '/users/:id' do
+    user = user.find(params[:id])
+
+    user.update(username: params:name)
+    user.to_json
   end
 
   delete '/users/characters/:id' do
