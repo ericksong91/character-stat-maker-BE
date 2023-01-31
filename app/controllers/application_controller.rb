@@ -50,10 +50,10 @@ class ApplicationController < Sinatra::Base
   post '/users/characters/new' do
     character = Character.create(
       name: Faker::Name.first_name,
-      job: jobs[rand(0...26)],
-      char_sprite: "TBD",
       user_id: params[:user_id],
+      char_sprite: "TBD",
       level: rand(1...20),
+      job: jobs[rand(0...26)],
       hp: rand(20...60),
       str: rand(10...35),
       mag: rand(10...35),
@@ -69,7 +69,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/users/new' do
-
     user = User.create(username: params[:name])
     user.save
     user.to_json
