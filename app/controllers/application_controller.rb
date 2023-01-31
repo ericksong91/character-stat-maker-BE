@@ -98,12 +98,12 @@ class ApplicationController < Sinatra::Base
     character.to_json
   end
 
-  delete 'users/:id' do
-    user = User.find(params[:id]).characters
+  delete '/users/:id' do
+    user = User.find(params[:id])
 
-    user.destroy_all
+    user.characters.destroy_all
+    user.destroy
     user.to_json
   end
-  
 
 end
