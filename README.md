@@ -15,10 +15,12 @@ This particular repository hosts the backend of the application. It uses ActiveR
 
 - To run the server, type the following into the console:
     - rake db:migrate db:seed
+    - rake server
 
 - To regenerate the seed, type the following into the console:
     - rake db:drop
     - rake db:migrate db:seed
+    - rake server
 
 - GET: 
     - All Users (http://localhost:9292/users)
