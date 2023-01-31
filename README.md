@@ -39,7 +39,9 @@ This particular repository hosts the backend of the application. It uses ActiveR
 
 ## Planned Features
 
-1. Money system to hire units
+1. Money system to hire characters
+
+2. Add photos to characters
 
 ## Credits  
 
