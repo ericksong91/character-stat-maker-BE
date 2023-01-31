@@ -13,7 +13,8 @@ This particular repository hosts the backend of the application. It uses ActiveR
 
 ## Usage
 
-- To run the server, type 'rake server' into the console
+- To run the server, type the following into the console:
+    - rake db:migrate db:seed
 
 - To regenerate the seed, type the following into the console:
     - rake db:drop
