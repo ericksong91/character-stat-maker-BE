@@ -1,11 +1,11 @@
 # Character Stat Maker
 
 ## Description
-This application is designed to generate a simple user list as well as randomly generated video game character stats. The data used for this project is base loosely off the video game [Fire Emblem](https://en.wikipedia.org/wiki/Fire_Emblem). 
+This application is designed to generate a simple user list as well as randomly generated video game character stats. The data used for this project is base loosely off the video game [Fire Emblem](https://en.wikipedia.org/wiki/Fire_Emblem).
 
 The site allows you to create your own username as well as randomly generated characters for each user. Users have the ability to change the names and jobs of each character but they are not allowed to change the stats of the characters.
 
-This particular repository hosts the backend of the application. You can use the randomly generated seed to play around with the application's here: 
+This particular repository hosts the backend of the application. It uses ActiveRecord with SQL and Sinatra to host a server on your local machine. You can use the randomly generated seed to play around with the application's here: 
 
 [Front End Repository](https://github.com/ericksong91/character-stat-maker-FE)
 
