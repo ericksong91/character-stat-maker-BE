@@ -5,9 +5,11 @@ This application is designed to generate a simple user list as well as randomly 
 
 The site allows you to create your own username as well as randomly generated characters for each user. Users have the ability to change the names and jobs of each character but they are not allowed to change the stats of the characters.
 
-This particular repository hosts the backend of the application. It uses ActiveRecord with SQL and Sinatra to host a server on your local machine. You can use the randomly generated seed to play around with the application's here: 
+This particular repository hosts the backend of the application. It uses ActiveRecord with SQL and Sinatra to host a server on your local machine. You can use the randomly generated seed to play around with the application.
 
 [Front End Repository](https://github.com/ericksong91/character-stat-maker-FE)
+
+[Back End Repository](https://github.com/ericksong91/character-stat-maker-BE)
 
 ## Usage
 
