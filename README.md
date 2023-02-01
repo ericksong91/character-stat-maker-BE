@@ -1,4 +1,4 @@
-# Character Stat Maker
+# Character Stat Maker (Backend)
 
 ## Description
 This application is designed to generate a simple user list as well as randomly generated video game character stats. The data used for this project is base loosely off the video game [Fire Emblem](https://en.wikipedia.org/wiki/Fire_Emblem).
@@ -21,6 +21,8 @@ This particular repository hosts the backend of the application. It uses ActiveR
     1. `rake db:drop`
     2. `rake db:migrate db:seed`
     3. `rake server`
+
+![Usage](./images/backend_1.gif)
 
 - GET: 
     - All Users (http://localhost:9292/users)
