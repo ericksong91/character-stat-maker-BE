@@ -36,12 +36,7 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get "/users" do
     users = User.all
-    users.to_json
-  end
-
-  get "/users/characters" do
-    character = Character.all
-    character.to_json
+    users.to_json(:include => :characters)
   end
 
   get "/users/:id" do
