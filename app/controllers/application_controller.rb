@@ -39,6 +39,11 @@ class ApplicationController < Sinatra::Base
     users.to_json(:include => :characters)
   end
 
+  get "/users/characters" do
+    character = Character.all
+    character.to_json
+  end
+
   get "/users/:id" do
     character = User.find(params[:id]).characters
     character.to_json
