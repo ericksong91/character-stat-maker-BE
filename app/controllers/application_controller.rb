@@ -33,22 +33,13 @@ class ApplicationController < Sinatra::Base
     "Dancer"
 ]
   
-  # Add your routes here
+  #GET list of users
   get "/users" do
     users = User.all
     users.to_json(:include => :characters)
   end
 
-  get "/users/characters" do
-    character = Character.all
-    character.to_json
-  end
-
-  get "/users/:id" do
-    character = User.find(params[:id]).characters
-    character.to_json
-  end
-
+  #POST new character
   post '/users/characters/new' do
     character = Character.create(
       name: Faker::Name.first_name,
@@ -70,6 +61,7 @@ class ApplicationController < Sinatra::Base
     character.to_json
   end
 
+  #POST new user
   post '/users/new' do
     user = User.create(username: params[:username])
     user.save
@@ -77,6 +69,7 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  #PATCH user's character
   patch '/users/characters/:id' do
     character = Character.find(params[:id])
 
@@ -84,6 +77,7 @@ class ApplicationController < Sinatra::Base
     character.to_json
   end
 
+  #PATCH user's name
   patch '/users/:id' do
     user = User.find(params[:id])
 
@@ -91,6 +85,7 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
+  #DELETE user's character
   delete '/users/characters/:id' do
     character = Character.find(params[:id])
 
@@ -98,6 +93,7 @@ class ApplicationController < Sinatra::Base
     character.to_json
   end
 
+  #DELETE user
   delete '/users/:id' do
     user = User.find(params[:id])
 
