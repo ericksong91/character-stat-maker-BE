@@ -65,7 +65,7 @@ class ApplicationController < Sinatra::Base
   post '/users/new' do
     user = User.create(username: params[:username])
     user.save
-    user.to_json
+    user.to_json(:include => :characters)
   end
 
   #PATCH user's character
