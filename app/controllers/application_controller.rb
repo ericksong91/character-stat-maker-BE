@@ -66,7 +66,6 @@ class ApplicationController < Sinatra::Base
     user = User.create(username: params[:username])
     user.save
     user.to_json
-
   end
 
   #PATCH user's character
@@ -82,7 +81,7 @@ class ApplicationController < Sinatra::Base
     user = User.find(params[:id])
 
     user.update(username: params[:username])
-    user.to_json
+    user.to_json(:include => :characters)
   end
 
   #DELETE user's character
