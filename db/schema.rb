@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2023_01_24_190557) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "job"
-    t.string "char_sprite"
     t.integer "user_id"
     t.integer "level"
     t.integer "hp"

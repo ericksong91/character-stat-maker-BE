@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
     character = Character.create(
       name: Faker::Name.first_name,
       user_id: params[:user_id],
-      char_sprite: "TBD",
+      # char_sprite: "TBD",
       level: rand(1...20),
       job: jobs[rand(0...26)],
       hp: rand(20...60),

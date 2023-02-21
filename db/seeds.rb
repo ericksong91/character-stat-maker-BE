@@ -40,7 +40,7 @@ jobs = [
         Character.create(
             name: Faker::Name.first_name,
             job: jobs[rand(0...26)],
-            char_sprite: "TBD",
+            # char_sprite: "TBD",
             user_id: user.id,
             level: rand(1...20),
             hp: rand(20...60),
